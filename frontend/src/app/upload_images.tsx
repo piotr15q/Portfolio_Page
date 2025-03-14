@@ -38,9 +38,9 @@ export default function UploadImages() {
 
   return (
     <div>
-      <div className="flex flex-col items-center mt-10">
-        <label className="mb-4 bg-blue-500 text-white px-4 py-2 rounded cursor-pointer mt-10">
-          Upload Image
+      <div className="flex flex-col items-center mt-4">
+        <label className="mb-4 bg-gray-600 hover:bg-gray-400 text-white px-4 py-2 rounded cursor-pointer mt-4">
+          try to predict your cat or dog image
           <input className="hidden" type="file" accept="image/*" onChange={handleImageChange} />
         </label>
         {selectedImage && (
@@ -48,7 +48,7 @@ export default function UploadImages() {
             <Image src={selectedImage} alt="Uploaded image" width={500} height={300} />
             <button
               onClick={handleUpload}
-              className="mt-4 bg-blue-500 text-white px-4 py-2 rounded cursor-pointer"
+              className="mt-4 bg-gray-600 hover:bg-gray-400 text-white px-4 py-2 rounded cursor-pointer"
             >
               Predict
             </button>
