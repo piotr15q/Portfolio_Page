@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import UploadImages from "./upload_images";
-
+import UploadPDF from "./upload_cv";
 export default function Home() {
 
   return (
@@ -76,6 +76,25 @@ export default function Home() {
                 where the user can upload an image and the system will return a classification result.
               </p>
               <UploadImages />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Cv classificator Project */}
+      <section id="projects" className="bg-white p-10">
+        <div className="container mx-auto text-center">
+          <div className="space-y-6">
+            <div className="bg-gray-100 p-6 rounded-lg shadow-lg border border-gray-200">
+              <h3 className="text-2xl font-semibold">CV checker</h3>
+              <p className="mt-2">
+                This project is an image classification model that recognizes whether there is a dog or a cat in an image. 
+                It was implemented in PyTorch and uses convolutional neural networks (CNN) for computer vision. 
+                The neural network model, was created from scratch and was trained on nearly 17,000 images containing either a dog or a cat. 
+                The model achieved results of ~87% accuracy. The model is integrated with this website, 
+                where the user can upload an image and the system will return a classification result.
+              </p>
+              {<UploadPDF/>}
             </div>
           </div>
         </div>
